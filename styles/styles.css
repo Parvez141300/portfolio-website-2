@@ -182,7 +182,7 @@ nav {
     color: black;
 }
 
-/* fifth part sction  */
+/* fifth part */
 
 .fifth_part{
     max-width: 1140px;
@@ -197,9 +197,17 @@ nav {
     border-radius: 15px;
     margin-bottom: 20px;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 .next_skill_boxes a{
     color: black;
+}
+.image_with_content_alignment{
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
 
 /* sixth part  */
