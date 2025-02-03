@@ -3,6 +3,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     font-family: "Azeret Mono", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -42,8 +43,13 @@ nav {
     border: 1px solid gray;
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.5s ease-out;
 }
-
+.resume_btn:hover{
+    background-color: red;
+    color: white;
+    border-color: transparent;
+}
 /* hero section styles  */
 
 .banner_container {
@@ -77,15 +83,18 @@ nav {
     background-color: #0D1321;
     padding: 10px 20px;
     border-radius: 5px;
+    transition: all 0.5s ease-out;
+}
+.contact_btn:hover{
+    background-color: red;
+    color: white;
+    border-color: transparent
 }
 
 /* Main Section  */
 
 /* second section  */
 
-.second_part{
-    background-color: ;
-}
 
 /* Why Web Develop Section  */
 .second_part{
@@ -93,8 +102,11 @@ nav {
     padding: 80px 0px;
     margin: 0 auto;
 }
-.why_web_development {
+.why_web_development{
     text-align: center;
+}
+.why_web_development h1{
+    margin-bottom: 10px;
 }
 .boxes_1{
     display: flex;
@@ -108,6 +120,10 @@ nav {
     margin-bottom: 30px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.39), rgb(255, 218, 217));
     border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.boxes_1:hover{
+    box-shadow: 2px 2px 10px 0px aqua;
 }
 .boxes_2{
     display: flex;
@@ -122,6 +138,10 @@ nav {
     margin-bottom: 30px;
     background: linear-gradient(270deg, rgba(255, 255, 255, 0.39), rgb(255, 218, 217));
     border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.boxes_2:hover{
+    box-shadow: 2px 2px 10px 0px aqua;
 }
 .boxes_3{
     display: flex;
@@ -135,9 +155,25 @@ nav {
     margin-bottom: 30px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.39), rgb(255, 218, 217));
     border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.boxes_3:hover{
+    box-shadow: 2px 2px 10px 0px aqua;
 }
 .box{
     max-width: 475px;
+}
+.box h2,p{
+    margin-bottom: 10px;
+}
+.primary_btn{
+    border-radius: 10px;
+    transition: all 0.5s ease-out;
+}
+.primary_btn:hover{
+    background-color: red;
+    color: white;
+    border-color: transparent;
 }
 
 /* third part  */
@@ -150,6 +186,9 @@ nav {
 .my_inpiration{
     text-align: center;
 }
+.my_inpiration h1{
+    margin-bottom: 10px;
+}
 .video_youtube{
     text-align: center;
 }
@@ -160,7 +199,7 @@ nav {
 
 /* Fouth Part  */
 
-.fouth_part{
+.fourth_part{
     max-width: 1140px;
     padding: 80px 0px;
     margin: 0 auto;
@@ -168,18 +207,39 @@ nav {
 .my_target{
     text-align: center;
 }
+.my_target h1{
+    margin-bottom: 10px;
+}
+.my_target p{
+    margin-bottom: 10px;
+}
 .skill_boxes{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .skill_box{
     width: 300px;
     padding: 30px;
     background-color: #FFDAD9;
     border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.skill_box img,h3,p{
+    margin-bottom: 10px;
 }
 .skill_box a{
     color: black;
+    transition: 0.5s;
+}
+.skill_box a:hover{
+    color: red;
+}
+.skill_box:hover{
+    transform: translateY(10px) translateX(10px);
+    box-shadow: 0px 2px 10px 0px black;
 }
 
 /* fifth part */
@@ -191,6 +251,9 @@ nav {
 }
 .my_next_target{
     text-align: center;
+}
+.my_next_target h1,p {
+    margin-bottom: 10px;
 }
 .next_skill_boxes{
     border: 1px solid black;
@@ -209,7 +272,12 @@ nav {
     align-items: center;
     gap: 50px;
 }
-
+.image_content a{
+    transition: 0.5s;
+}
+.image_content a:hover{
+    color: red;
+}
 /* sixth part  */
 
 .sixth_part{
@@ -225,6 +293,7 @@ nav {
 }
 .title_support, .description_support{
     color: white;
+    margin-bottom: 10px;
 }
 input[type='email']{
     padding: 20px;
@@ -238,6 +307,11 @@ input[type='submit']{
     padding: 20px;
     border: none;
     border-radius: 10px;
+    transition: 0.5s;
+}
+input[type='submit']:hover{
+    background-color: red;
+    color: white;
 }
 
 /* footer part  */
@@ -256,4 +330,258 @@ input[type='submit']{
 .icons{
     display: flex;
     gap: 15px;
+}
+
+
+/* hide class  */
+
+.hide{
+    display: none;
+}
+
+/* mobile device responsive */
+@media screen and (max-width: 576px) {
+    /* navbar start  */
+    nav{
+        width: 90%;
+        margin: auto;
+        padding: 20px 0px;
+    }
+    /* navbar end  */
+
+    /* banner start  */
+    .banner_container{
+        width: 90%;
+        margin: auto;
+        height: 100%;
+    }
+    .banner_content img{
+        width: 50%;
+    }
+    .hero_title{
+        font-size: 1.5rem;
+    }
+    /* banner end  */
+
+    /* second part start  */
+    .second_part{
+        width: 90%;
+        margin: auto;
+    }
+    .why_web_development{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .boxes_1{
+        flex-direction: column;
+        width: 90%;
+    }
+    .boxes_2{
+        flex-direction: column;
+        width: 90%;
+    }
+    .boxes_3{
+        flex-direction: column;
+        width: 90%;
+    }
+    /* second part end  */
+
+    /* third part start  */
+    .third_part{
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    .video_youtube{
+        margin: auto;
+    }
+    .video_youtube .video_iframe{
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    /* third part end  */
+
+    /* fourth part start  */
+    .fourth_part{
+        width: 90%;
+        margin: auto;
+    }
+    .skill_boxes{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        
+    }
+    .skill_box{
+        text-align: center;
+    }
+    .skill_box:hover{
+        transform: translateX(0px);
+    }
+    /* fourth part end  */
+
+    /* fifth part start  */
+    .fifth_part{
+        width: 90%;
+        margin: auto;
+    }
+    .image_with_content_alignment{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    /* fifth part end  */
+
+    /* sixth part start  */
+    .sixth_part{
+        width: 90%;
+        margin: auto;
+    }
+    .i_need_support p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .sixth_part .email_input{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    /* sixth part end  */
+
+    /* footer part start  */
+    .primary_bg_color{
+        margin-top: 20px;
+    }
+    .footer_part{
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    /* footer part end  */
+}
+
+
+
+/* tablet device responsive  */
+@media screen and (min-width:576px) and (max-width:992px) {
+    /* navbar start  */
+    nav{
+        width: 90%;
+        margin: auto;
+        padding: 20px 0px;
+    }
+    /* navbar end  */
+
+    /* banner start  */
+    .banner_container{
+        width: 90%;
+        margin: auto;
+        height: 100%;
+    }
+    /* banner end  */
+
+    /* second_part start  */
+    .second_part{
+        width: 90%;
+        margin: auto;
+    }
+    .why_web_development{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .boxes_1{
+        flex-direction: column;
+        width: 90%;
+    }
+    .boxes_2{
+        flex-direction: column;
+        width: 90%;
+    }
+    .boxes_3{
+        flex-direction: column;
+        width: 90%;
+    }
+    /* second_part end  */
+
+    /* third part start  */
+    .third_part{
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    .video_youtube{
+        margin: auto;
+    }
+    .video_youtube .video_iframe{
+        margin: auto;
+        width: 100%;
+        height: 100vh;
+        border-radius: 20px;
+    }
+    /* third part end  */
+
+    /* fourth part start  */
+    .fourth_part{
+        width: 90%;
+        margin: auto;
+    }
+    .skill_boxes{
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+    .skill_box{
+        text-align: center;
+    }
+    .skill_box:hover{
+        transform: translateX(0px);
+    }
+    /* fourth part end  */
+
+    /* fifth part start  */
+    .fifth_part{
+        width: 90%;
+        margin: auto;
+    }
+    .image_with_content_alignment{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    /* fifth part end  */
+
+    /* sixth part start  */
+    .sixth_part{
+        width: 90%;
+        margin: auto;
+    }
+    .i_need_support p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .sixth_part .email_input{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    /* sixth part end  */
+
+    /* footer part start  */
+    .primary_bg_color{
+        margin-top: 20px;
+    }
+    .footer_part{
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    /* footer part end  */
 }
